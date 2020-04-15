@@ -155,7 +155,7 @@ static int32_t tongfang_card_init(struct s_reader *reader, ATR *newatr)
 		}
 
 	}
-	else if(cas_version == 3){	//tongfang 3
+	else if(cas_version >= 3){	//tongfang 3
 		write_cmd(get_ppua_cmdv3, get_ppua_cmdv3 + 5);
 		if((cta_res[cta_lr - 2] & 0xf0) != 0x60)
 		{
